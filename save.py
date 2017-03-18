@@ -5,7 +5,15 @@ import distutils.dir_util
 import pickle
 import hashlib
 import time
+import urllib.request
 
+UpDate = False
+
+if(UpDate==True):
+    urllib.request.urlretrieve ("https://raw.githubusercontent.com/ChocolaKuma/Kuma_Hash/master/rawPassword.txt", "sys/rawPassword.txt")
+    urllib.request.urlretrieve ("https://raw.githubusercontent.com/ChocolaKuma/Kuma_Hash/master/cryptPassword.txt", "sys/cryptPassword.txt")
+
+    
 time_start = time.time()
 
 def value_lookup(LookupNum):
